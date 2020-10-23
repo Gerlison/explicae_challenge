@@ -6,24 +6,24 @@ class Table {
 
   #createTablesRecursively(value, table) {
     Object.keys(value).forEach((key) => {
-      const THRowElement = document.createElement("tr");
+      const TRElement = document.createElement("tr");
       const THElement = document.createElement("th");
       const TDElement = document.createElement("td");
 
       THElement.append(key);
-      THRowElement.appendChild(THElement);
+      TRElement.appendChild(THElement);
 
       if (value[key] && typeof value[key] === "object") {
         const tableElement = document.createElement("table");
         this.#createTablesRecursively(value[key], tableElement);
         TDElement.appendChild(tableElement);
-        THRowElement.appendChild(TDElement);
+        TRElement.appendChild(TDElement);
       } else {
         TDElement.append(value[key] || "s/n");
-        THRowElement.appendChild(TDElement);
+        TRElement.appendChild(TDElement);
       }
 
-      return table.append(THRowElement, THRowElement);
+      return table.append(TRElement);
     });
   }
 
