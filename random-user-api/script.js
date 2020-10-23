@@ -12,17 +12,14 @@ class Table {
 
       THElement.append(key);
       TRElement.appendChild(THElement);
-
       if (value[key] && typeof value[key] === "object") {
         const tableElement = document.createElement("table");
         this.#createTablesRecursively(value[key], tableElement);
         TDElement.appendChild(tableElement);
-        TRElement.appendChild(TDElement);
       } else {
         TDElement.append(value[key] || "s/n");
-        TRElement.appendChild(TDElement);
       }
-
+      TRElement.appendChild(TDElement);
       return table.append(TRElement);
     });
   }
