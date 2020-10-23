@@ -6,4 +6,4 @@
 
 ## Result
 
-<img src="./.github/assets/megasena-screenshot.png" />
+<img src="../.github/assets/megasena-screenshot.png" />
