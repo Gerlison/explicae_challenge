@@ -56,7 +56,6 @@ window.onload = () => {
   fetch("https://randomuser.me/api/?results=5")
     .then((res) => res.json())
     .then(({ results }) => {
-      console.log(results);
       const table = new Table(results);
       table.create();
     });
