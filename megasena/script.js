@@ -42,7 +42,7 @@ const megasena = (() => {
         acc.push(_getUniqueRandomDozen(acc));
         return acc;
       }, [])
-      .sort();
+      .sort((a, b) => a - b);
   };
 
   const createTable = () => {
