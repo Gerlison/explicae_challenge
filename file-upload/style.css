@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  padding: 4em;
+}
+
+input {
+  display: none;
+}
+
+label {
+  width: 300px;
+  padding: 1em;
+  border-radius: 15px;
+  background-color: #fff;
+  border: 1px solid #3f3f3f;
+  cursor: pointer;
+
+  color: #c0c0c0;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+p {
+  width: 90%;
+  margin: 0 auto;
+}
